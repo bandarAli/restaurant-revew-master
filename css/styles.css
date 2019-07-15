@@ -34,7 +34,6 @@
   /* padding: 0 10px */
   width: 200px;
 }
-
 .skip-link {
   display: block;
   position: absolute;
@@ -111,7 +110,7 @@
 }
 
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #940b0b;
   font-family: Arial,sans-serif;
   font-size: 14pt;
   font-weight: 200;
