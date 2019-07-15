@@ -14,22 +14,23 @@
 
 <body>
   <header>
+    <a href="#filter-options" class="skip-link">Skip to Filter result</a> 
     <nav>
       <h1><a tabindex="1" href="/" aria-label="Home">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
   <main id="maincontent">
-    <section id="map-container" tabindex="-1">
-      <div id="map"></div>
+    <section id="map-container" role="application" aria-label="Mapbox Maps">
+      <div id="map" aria-labelledby="map-container"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div id="filter-options" class="filter-options">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="select neighborhoods" tabindex="2">
+        <select aria-label="Filter by neighborhood" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="select cuisine" tabindex="2">
+        <select aria-label="Filter by cuisine" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>

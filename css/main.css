@@ -28,6 +28,11 @@ a:hover, a:focus {
 	color: #3397db;
 	text-decoration: none;
 }
+#restaurants-list li a:hover,  /* put */
+#restaurants-list li a:focus {
+	background-color : red;
+	text-decoration: none;
+}
 a img{
 	border: none 0px #fff;
 }
