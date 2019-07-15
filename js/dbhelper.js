@@ -147,10 +147,34 @@ class DBHelper {
   }
 
   /**
-   * Restaurant image URL.
+   * Restaurant image URL.Using the images after the gulp task
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
+    let url = `/img/${(restaurant.photograph.split('.')[0]||restaurant.id)}-medium.jpg`;
+    return url;
+  }
+  // static imageUrlForRestaurant(restaurant) {
+  //   return (`/img/${restaurant.photograph}`);
+  // }
+  /**
+   * Restaurant srcset attribute for to decide 
+   * which image to use (large,Med or small) as the screen size .
+   */
+  static imageSrcsetForRestaurant(restaurant) {
+    const imageSrc = `/img/${(restaurant.photograph.split('.')[0]||restaurant.id)}`;
+    return `${imageSrc}-small.jpg 300w,
+            ${imageSrc}-medium.jpg 600w,
+            ${imageSrc}-large.jpg 800w`;
+  }
+
+  /**
+   * Restaurant sizes attribute  to decide 
+   * which size to use as the screen size .
+   */
+  static imageSizesForRestaurant(restaurant) {
+    return `(max-width: 360px) 280px,
+            (max-width: 600px) 600px,
+            400px`;
   }
 
   /**
