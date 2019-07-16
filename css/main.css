@@ -64,7 +64,7 @@ position: relative;
 #footer {
   background-color: #444;
   color: #b3b3b3;
-  font-size: 8pt;
+  font-size: 15pt; /* changed to 15 pt for better accebility */
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
