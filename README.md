@@ -1,4 +1,4 @@
-# Stage Two of Restaurant Reviews
+# Restaurant Reviews Project
 created by Bander Habesh for [Udacity's](https://www.udacity.com) Front End Developer Nanodegree. 
 
 
