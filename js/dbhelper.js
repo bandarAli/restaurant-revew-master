@@ -201,5 +201,14 @@ class DBHelper {
     return marker;
   } */
 
+  // Help methode called from main.js and restaurant_info.js an error occurred while trying to initialize the map
+  static mapOffline() {
+    const map = document.getElementById('map');
+    map.className = "map-offline";
+    map.innerHTML = `<div class="warning-icon">!</div>
+    <div class="warning-message">We're having problems loading Maps</div>
+    <div class="warning-suggestion">You Are Offline.</div>`;
+  }
+
 }
 

@@ -89,9 +89,14 @@ initMap = () => {
       }).addTo(newMap);
     } catch (error) {
       console.log("Map isn't initialized", error);
+      // set map as offline using help methode DBHelper
+      DBHelper.mapOffline();
     }
+  } else {
+    // if it's offline set the map offline
+    DBHelper.mapOffline();
   }
-  updateRestaurants();
+updateRestaurants();
 }
 /* window.initMap = () => {
   let loc = {
@@ -197,8 +202,8 @@ createRestaurantHTML = (restaurant) => {
  * Add markers for current restaurants to the map.
  */
 addMarkersToMap = (restaurants = self.restaurants) => {
-  // check newMap isnt definec before .
-  if (!newMap || !L) return;
+
+  if (!newMap || !L) return; // added to check newMap isnt definec before .
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
